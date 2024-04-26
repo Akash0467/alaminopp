@@ -16,7 +16,7 @@ if($result instanceof user){
 // var_dump($result->etc());
 print_r($result->etc()."<br>") ;
 
-
+// setter_getter
 class btn{
     public $email;
 
@@ -38,3 +38,28 @@ $getEmail = new btn;
 $getEmail->set('akash2754@gmail.com');
 
 echo $getEmail->get();
+
+// Access modifier
+class student{
+    public $name;
+    private $roll;
+    protected $registrationId = 1500900419;
+
+    public function setRoll($roll)
+    {
+        //set roll
+        $this->roll = $roll;
+    }
+
+    public function getRoll()
+    {
+        return $this->roll;
+    }
+}
+
+
+$user  = new student;
+// echo $user->name= "Akash";
+ $user->setRoll(101351);
+// echo $user->registrationId;
+echo $user->getRoll();
